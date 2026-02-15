@@ -1,0 +1,33 @@
+#todo-container>* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#todo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.todo {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    padding: 4px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 1440px) {
+    #todo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 996px) {
+    #todo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 576px) {
+    #todo-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
